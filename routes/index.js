@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/index', function(req, res, next) {
-  res.render('index', { title: 'Express/index' });
+  res.render('index.html', { title: 'Express/index' });
 });
 
 router.get('/default', function(req, res, next) {

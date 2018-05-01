@@ -1,7 +1,1118 @@
 doctype html
 html
   head
+    meta(charset='utf-8')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Xenon Boostrap Admin Panel")
+    meta(name="author", content="")
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    // link(rel="stylesheet", href="http://fonts.useso.com/css?family=Arimo:400,700,400italic")
+    link(rel="stylesheet", href="/assets/css/fonts/linecons/css/linecons.css")
+    link(rel="stylesheet", href="/assets/css/fonts/fontawesome/css/font-awesome.min.css")
+    link(rel="stylesheet", href="/assets/css/bootstrap.css")
+    link(rel="stylesheet", href="/assets/css/xenon-core.css")
+    link(rel="stylesheet", href="/assets/css/xenon-forms.css")
+    link(rel="stylesheet", href="/assets/css/xenon-components.css")
+    link(rel="stylesheet", href="/assets/css/xenon-skins.css")
+    link(rel="stylesheet", href="/assets/css/custom.css")
+    script(src="/assets/js/jquery-1.11.1.min.js")
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src="/assets/js/html5shiv.min.js")
+      script(src="/assets/js/respond.min.js")
+
+  body.page-body
+    .settings-pane
+      a(href="#", data-toggle="settings-pane", data-animate="true")
+        | ×
+      | 		
+      .settings-pane-inner
+        .row
+          .col-md-4
+            .user-info
+              .user-image
+                a(href="extra-profile.html")
+                  img.img-responsive.img-circle(src="assets/images/user-2.png")
+              | 						
+              .user-details
+                h3
+                  a(href="extra-profile.html") John Smith
+                  // Available statuses: is-online, is-idle, is-busy and is-offline
+                  span.user-status.is-online
+                | 							
+                p.user-title Web Developer
+                | 							
+                .user-links
+                  a.btn.btn-primary(href="extra-profile.html") Edit Profile
+                  | 								
+                  a.btn.btn-success(href="extra-profile.html") Upgrade
+          | 				
+          .col-md-8.link-blocks-env
+            .links-block.left-sep
+              h4
+                span Notifications
+              | 						
+              ul.list-unstyled
+                li
+                  input#sp-chk1.cbr.cbr-primary(type="checkbox", checked="checked")
+                  | 								
+                  label(for="sp-chk1") Messages
+                | 							
+                li
+                  input#sp-chk2.cbr.cbr-primary(type="checkbox", checked="checked")
+                  | 								
+                  label(for="sp-chk2") Events
+                | 							
+                li
+                  input#sp-chk3.cbr.cbr-primary(type="checkbox", checked="checked")
+                  | 								
+                  label(for="sp-chk3") Updates
+                | 							
+                li
+                  input#sp-chk4.cbr.cbr-primary(type="checkbox", checked="checked")
+                  | 								
+                  label(for="sp-chk4") Server Uptime
+            | 					
+            .links-block.left-sep
+              h4
+                a(href="#")
+                  span Help Desk
+              | 						
+              ul.list-unstyled
+                li
+                  a(href="#")
+                    i.fa-angle-right
+                    | Support Center
+                | 							
+                li
+                  a(href="#")
+                    i.fa-angle-right
+                    | Submit a Ticket
+                | 							
+                li
+                  a(href="#")
+                    i.fa-angle-right
+                    | Domains Protocol
+                | 							
+                li
+                  a(href="#")
+                    i.fa-angle-right
+                    | Terms of Service
+
+    .page-container
+      // add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always
+      // Add "fixed" class to make the sidebar fixed always to the browser viewport.
+      // Adding class "toggle-others" will keep only one menu item open at a time.
+      // Adding class "collapsed" collapse sidebar root elements and show only icons.
+      .sidebar-menu.toggle-others.fixed
+        .sidebar-menu-inner
+          header.logo-env
+            // logo
+            .logo
+              a.logo-expanded(href="dashboard-1.html")
+                img(src="/assets/images/logo@2x.png", width="80", alt="")
+              | 						
+              | 						
+              a.logo-collapsed(href="dashboard-1.html")
+                img(src="/assets/images/logo-collapsed@2x.png", width="40", alt="")
+            // This will toggle the mobile menu and will be visible only on mobile devices
+            .mobile-menu-toggle.visible-xs
+              a(href="#", data-toggle="user-info-menu")
+                i.fa-bell-o
+                | 							
+                span.badge.badge-success 7
+              | 						
+              | 						
+              a(href="#", data-toggle="mobile-menu")
+                i.fa-bars
+            // This will open the popup with user profile settings, you can use for any purpose, just be creative
+            .settings-icon
+              a(href="#", data-toggle="settings-pane", data-animate="true")
+                i.linecons-cog
+          | 						
+          | 				
+          | 						
+          | 				
+          ul#main-menu.main-menu
+            // add class "multiple-expanded" to allow multiple submenus to open
+            // class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active"
+            li
+              a(href="dashboard-1.html")
+                i.linecons-cog
+                | 							
+                span.title Dashboard
+              | 						
+              ul
+                li
+                  a(href="dashboard-1.html")
+                    span.title Dashboard 1
+                | 							
+                li
+                  a(href="dashboard-2.html")
+                    span.title Dashboard 2
+                | 							
+                li
+                  a(href="dashboard-3.html")
+                    span.title Dashboard 3
+                | 							
+                li
+                  a(href="dashboard-4.html")
+                    span.title Dashboard 4
+                | 							
+                li
+                  a(href="skin-generator.html")
+                    span.title Skin Generator
+            | 					
+            li
+              a(href="layout-variants.html")
+                i.linecons-desktop
+                | 							
+                span.title Layouts
+              | 						
+              ul
+                li
+                  a(href="layout-variants.html")
+                    span.title Layout Variants & API
+                | 							
+                li
+                  a(href="layout-collapsed-sidebar.html")
+                    span.title Collapsed Sidebar
+                | 							
+                li
+                  a(href="layout-static-sidebar.html")
+                    span.title Static Sidebar
+                | 							
+                li
+                  a(href="layout-horizontal-menu.html")
+                    span.title Horizontal Menu
+                | 							
+                li
+                  a(href="layout-horizontal-plus-sidebar.html")
+                    span.title Horizontal & Sidebar Menu
+                | 							
+                li
+                  a(href="layout-horizontal-menu-click-to-open-subs.html")
+                    span.title Horizontal Open On Click
+                | 							
+                li
+                  a(href="layout-horizontal-menu-min.html")
+                    span.title Horizontal Menu Minimal
+                | 							
+                li
+                  a(href="layout-right-sidebar.html")
+                    span.title Right Sidebar
+                | 							
+                li
+                  a(href="layout-chat-open.html")
+                    span.title Chat Open
+                | 							
+                li
+                  a(href="layout-horizontal-sidebar-menu-collapsed-right.html")
+                    span.title Both Menus & Collapsed
+                | 							
+                li
+                  a(href="layout-boxed.html")
+                    span.title Boxed Layout
+                | 							
+                li
+                  a(href="layout-boxed-horizontal-menu.html")
+                    span.title Boxed & Horizontal Menu
+                | 							
+                li
+                  a(href="#")
+                    span.title weidea.net
+            | 					
+            li.opened.active
+              a(href="ui-panels.html")
+                i.linecons-note
+                | 							
+                span.title UI Elements
+              | 						
+              ul
+                li
+                  a(href="ui-panels.html")
+                    span.title Panels
+                | 							
+                li.active
+                  a(href="ui-buttons.html")
+                    span.title Buttons
+                | 							
+                li
+                  a(href="ui-tabs-accordions.html")
+                    span.title Tabs & Accordions
+                | 							
+                li
+                  a(href="ui-modals.html")
+                    span.title Modals
+                | 							
+                li
+                  a(href="ui-breadcrumbs.html")
+                    span.title Breadcrumbs
+                | 							
+                li
+                  a(href="ui-blockquotes.html")
+                    span.title Blockquotes
+                | 							
+                li
+                  a(href="ui-progressbars.html")
+                    span.title Progress Bars
+                | 							
+                li
+                  a(href="ui-navbars.html")
+                    span.title Navbars
+                | 							
+                li
+                  a(href="ui-alerts.html")
+                    span.title Alerts
+                | 							
+                li
+                  a(href="ui-pagination.html")
+                    span.title Pagination
+                | 							
+                li
+                  a(href="ui-typography.html")
+                    span.title Typography
+                | 							
+                li
+                  a(href="ui-other-elements.html")
+                    span.title Other Elements
+            | 					
+            li
+              a(href="ui-widgets.html")
+                i.linecons-star
+                | 							
+                span.title Widgets
+            | 					
+            li
+              a(href="mailbox-main.html")
+                i.linecons-mail
+                | 							
+                span.title Mailbox
+                | 							
+                span.label.label-success.pull-right 5
+              | 						
+              ul
+                li
+                  a(href="mailbox-main.html")
+                    span.title Inbox
+                | 							
+                li
+                  a(href="mailbox-compose.html")
+                    span.title Compose Message
+                | 							
+                li
+                  a(href="mailbox-message.html")
+                    span.title View Message
+            | 					
+            li
+              a(href="tables-basic.html")
+                i.linecons-database
+                | 							
+                span.title Tables
+              | 						
+              ul
+                li
+                  a(href="tables-basic.html")
+                    span.title Basic Tables
+                | 							
+                li
+                  a(href="tables-responsive.html")
+                    span.title Responsive Table
+                | 							
+                li
+                  a(href="tables-datatables.html")
+                    span.title Data Tables
+            | 					
+            li
+              a(href="forms-native.html")
+                i.linecons-params
+                | 							
+                span.title Forms
+              | 						
+              ul
+                li
+                  a(href="forms-native.html")
+                    span.title Native Elements
+                | 							
+                li
+                  a(href="forms-advanced.html")
+                    span.title Advanced Plugins
+                | 							
+                li
+                  a(href="forms-wizard.html")
+                    span.title Form Wizard
+                | 							
+                li
+                  a(href="forms-validation.html")
+                    span.title Form Validation
+                | 							
+                li
+                  a(href="forms-input-masks.html")
+                    span.title Input Masks
+                | 							
+                li
+                  a(href="forms-file-upload.html")
+                    span.title File Upload
+                | 							
+                li
+                  a(href="forms-editors.html")
+                    span.title Editors
+                | 							
+                li
+                  a(href="forms-sliders.html")
+                    span.title Sliders
+            | 					
+            li
+              a(href="extra-gallery.html")
+                i.linecons-beaker
+                | 							
+                span.title Extra
+                | 							
+                span.label.label-purple.pull-right.hidden-collapsed New Items
+              | 						
+              ul
+                li
+                  a(href="extra-icons-fontawesome.html")
+                    span.title Icons
+                    | 									
+                    span.label.label-warning.pull-right 4
+                  | 								
+                  ul
+                    li
+                      a(href="extra-icons-fontawesome.html")
+                        span.title Font Awesome
+                    | 									
+                    li
+                      a(href="extra-icons-linecons.html")
+                        span.title Linecons
+                    | 									
+                    li
+                      a(href="extra-icons-elusive.html")
+                        span.title Elusive
+                    | 									
+                    li
+                      a(href="extra-icons-meteocons.html")
+                        span.title Meteocons
+                | 							
+                li
+                  a(href="extra-maps-google.html")
+                    span.title Maps
+                  | 								
+                  ul
+                    li
+                      a(href="extra-maps-google.html")
+                        span.title Google Maps
+                    | 									
+                    li
+                      a(href="extra-maps-advanced.html")
+                        span.title Advanced Map
+                    | 									
+                    li
+                      a(href="extra-maps-vector.html")
+                        span.title Vector Map
+                | 							
+                li
+                  a(href="extra-gallery.html")
+                    span.title Gallery
+                | 							
+                li
+                  a(href="extra-calendar.html")
+                    span.title Calendar
+                | 							
+                li
+                  a(href="extra-profile.html")
+                    span.title Profile
+                | 							
+                li
+                  a(href="extra-login.html")
+                    span.title Login
+                | 							
+                li
+                  a(href="extra-lockscreen.html")
+                    span.title Lockscreen
+                | 							
+                li
+                  a(href="extra-login-light.html")
+                    span.title Login Light
+                | 							
+                li
+                  a(href="extra-timeline.html")
+                    span.title Timeline
+                | 							
+                li
+                  a(href="extra-timeline-center.html")
+                    span.title Timeline Centerd
+                | 							
+                li
+                  a(href="extra-notes.html")
+                    span.title Notes
+                | 							
+                li
+                  a(href="extra-image-crop.html")
+                    span.title Image Crop
+                | 							
+                li
+                  a(href="extra-portlets.html")
+                    span.title Portlets
+                | 							
+                li
+                  a(href="blank-sidebar.html")
+                    span.title Blank Page
+                | 							
+                li
+                  a(href="extra-search.html")
+                    span.title Search
+                | 							
+                li
+                  a(href="extra-invoice.html")
+                    span.title Invoice
+                | 							
+                li
+                  a(href="extra-not-found.html")
+                    span.title 404 Page
+                | 							
+                li
+                  a(href="extra-tocify.html")
+                    span.title Tocify
+                | 							
+                li
+                  a(href="extra-loader.html")
+                    span.title Loading Progress
+                | 							
+                li
+                  a(href="extra-page-loading-ol.html")
+                    span.title Page Loading Overlay
+                | 							
+                li
+                  a(href="extra-notifications.html")
+                    span.title Notifications
+                | 							
+                li
+                  a(href="extra-nestable-lists.html")
+                    span.title Nestable Lists
+                | 							
+                li
+                  a(href="extra-scrollable.html")
+                    span.title Scrollable
+            | 					
+            li
+              a(href="charts-main.html")
+                i.linecons-globe
+                | 							
+                span.title Charts
+              | 						
+              ul
+                li
+                  a(href="charts-main.html")
+                    span.title Chart Variants
+                | 							
+                li
+                  a(href="charts-range.html")
+                    span.title Range Selector
+                | 							
+                li
+                  a(href="charts-sparklines.html")
+                    span.title Sparklines
+                | 							
+                li
+                  a(href="charts-map.html")
+                    span.title Map Charts
+                | 							
+                li
+                  a(href="charts-gauges.html")
+                    span.title Circular Gauges
+                | 							
+                li
+                  a(href="charts-bar-gauges.html")
+                    span.title Bar Gauges
+            | 					
+            li
+              a(href="#")
+                i.linecons-cloud
+                | 							
+                span.title Menu Levels
+              | 						
+              ul
+                li
+                  a(href="#")
+                    i.entypo-flow-line
+                    | 									
+                    span.title Menu Level 1.1
+                  | 								
+                  ul
+                    li
+                      a(href="#")
+                        i.entypo-flow-parallel
+                        | 											
+                        span.title Menu Level 2.1
+                    | 									
+                    li
+                      a(href="#")
+                        i.entypo-flow-parallel
+                        | 											
+                        span.title Menu Level 2.2
+                      | 										
+                      ul
+                        li
+                          a(href="#")
+                            i.entypo-flow-cascade
+                            | 													
+                            span.title Menu Level 3.1
+                        | 											
+                        li
+                          a(href="#")
+                            i.entypo-flow-cascade
+                            | 													
+                            span.title Menu Level 3.2
+                          | 												
+                          ul
+                            li
+                              a(href="#")
+                                i.entypo-flow-branch
+                                | 															
+                                span.title Menu Level 4.1
+                    | 									
+                    li
+                      a(href="#")
+                        i.entypo-flow-parallel
+                        | 											
+                        span.title Menu Level 2.3
+                | 							
+                li
+                  a(href="#")
+                    i.entypo-flow-line
+                    | 									
+                    span.title Menu Level 1.2
+                | 							
+                li
+                  a(href="#")
+                    i.entypo-flow-line
+                    | 									
+                    span.title Menu Level 1.3
+      | 		
+      | 		
+      .main-content
+        // User Info, Notifications and Menu Bar
+        nav.navbar.user-info-navbar(role="navigation")
+          // Left links for user info navbar
+          ul.user-info-menu.left-links.list-inline.list-unstyled
+            li.hidden-sm.hidden-xs
+              a(href="#", data-toggle="sidebar")
+                i.fa-bars
+            | 					
+            | 					
+            li.dropdown.hover-line
+              a(href="#", data-toggle="dropdown")
+                i.fa-envelope-o
+                | 							
+                span.badge.badge-green 15
+              | 							
+              | 						
+              ul.dropdown-menu.messages
+                li
+                  ul.dropdown-menu-list.list-unstyled.ps-scrollbar
+                    li.active
+                      // "active" class means message is unread
+                      a(href="#")
+                        span.line
+                          strong Luc Chartier
+                          | 												
+                          span.light.small - yesterday
+                        | 											
+                        | 											
+                        span.line.desc.small
+                          | This ain’t our first item, it is the best of the rest.
+                    | 									
+                    | 									
+                    li.active
+                      a(href="#")
+                        span.line
+                          strong Salma Nyberg
+                          | 												
+                          span.light.small - 2 days ago
+                        | 											
+                        | 											
+                        span.line.desc.small
+                          | Oh he decisively impression attachment friendship so if everything.
+                    | 									
+                    | 									
+                    li
+                      a(href="#")
+                        span.line
+                          | Hayden Cartwright
+                          span.light.small - a week ago
+                        | 											
+                        | 											
+                        span.line.desc.small
+                          | Whose her enjoy chief new young. Felicity if ye required likewise so doubtful.
+                    | 									
+                    | 									
+                    li
+                      a(href="#")
+                        span.line
+                          | Sandra Eberhardt
+                          span.light.small - 16 days ago
+                        | 											
+                        | 											
+                        span.line.desc.small
+                          | On so attention necessary at by provision otherwise existence direction.
+                    // Repeated
+                    li.active
+                      // "active" class means message is unread
+                      a(href="#")
+                        span.line
+                          strong Luc Chartier
+                          | 												
+                          span.light.small - yesterday
+                        | 											
+                        | 											
+                        span.line.desc.small
+                          | This ain’t our first item, it is the best of the rest.
+                    | 									
+                    | 									
+                    li.active
+                      a(href="#")
+                        span.line
+                          strong Salma Nyberg
+                          | 												
+                          span.light.small - 2 days ago
+                        | 											
+                        | 											
+                        span.line.desc.small
+                          | Oh he decisively impression attachment friendship so if everything.
+                    | 									
+                    | 									
+                    li
+                      a(href="#")
+                        span.line
+                          | Hayden Cartwright
+                          span.light.small - a week ago
+                        | 											
+                        | 											
+                        span.line.desc.small
+                          | Whose her enjoy chief new young. Felicity if ye required likewise so doubtful.
+                    | 									
+                    | 									
+                    li
+                      a(href="#")
+                        span.line
+                          | Sandra Eberhardt
+                          span.light.small - 16 days ago
+                        | 											
+                        | 											
+                        span.line.desc.small
+                          | On so attention necessary at by provision otherwise existence direction.
+                | 							
+                | 							
+                li.external
+                  a(href="blank-sidebar.html")
+                    span All Messages
+                    | 									
+                    i.fa-link-ext
+            | 					
+            | 					
+            li.dropdown.hover-line
+              a(href="#", data-toggle="dropdown")
+                i.fa-bell-o
+                | 							
+                span.badge.badge-purple 7
+              | 							
+              | 						
+              ul.dropdown-menu.notifications
+                li.top
+                  p.small
+                    a.pull-right(href="#") Mark all Read
+                    | 									You have 
+                    strong 3
+                    |  new notifications.
+                | 							
+                | 							
+                li
+                  ul.dropdown-menu-list.list-unstyled.ps-scrollbar
+                    li.active.notification-success
+                      a(href="#")
+                        i.fa-user
+                        | 											
+                        | 											
+                        span.line
+                          strong New user registered
+                        | 											
+                        | 											
+                        span.line.small.time
+                          | 30 seconds ago
+                    | 									
+                    | 									
+                    li.active.notification-secondary
+                      a(href="#")
+                        i.fa-lock
+                        | 											
+                        | 											
+                        span.line
+                          strong Privacy settings have been changed
+                        | 											
+                        | 											
+                        span.line.small.time
+                          | 3 hours ago
+                    | 									
+                    | 									
+                    li.notification-primary
+                      a(href="#")
+                        i.fa-thumbs-up
+                        | 											
+                        | 											
+                        span.line
+                          strong Someone special liked this
+                        | 											
+                        | 											
+                        span.line.small.time
+                          | 2 minutes ago
+                    | 									
+                    | 									
+                    li.notification-danger
+                      a(href="#")
+                        i.fa-calendar
+                        | 											
+                        | 											
+                        span.line
+                          | John cancelled the event
+                        | 											
+                        | 											
+                        span.line.small.time
+                          | 9 hours ago
+                    | 									
+                    | 									
+                    li.notification-info
+                      a(href="#")
+                        i.fa-database
+                        | 											
+                        | 											
+                        span.line
+                          | The server is status is stable
+                        | 											
+                        | 											
+                        span.line.small.time
+                          | yesterday at 10:30am
+                    | 									
+                    | 									
+                    li.notification-warning
+                      a(href="#")
+                        i.fa-envelope-o
+                        | 											
+                        | 											
+                        span.line
+                          | New comments waiting approval
+                        | 											
+                        | 											
+                        span.line.small.time
+                          | last week
+                | 							
+                | 							
+                li.external
+                  a(href="#")
+                    span View all notifications
+                    | 									
+                    i.fa-link-ext
+          // Right links for user info navbar
+          ul.user-info-menu.right-links.list-inline.list-unstyled
+            li.search-form
+              // You can add "always-visible" to show make the search input visible
+              form(method="get", action="extra-search.html")
+                input.form-control.search-field(type="text", name="s", placeholder="Type to search...")
+                | 							
+                | 							
+                button.btn.btn-link(type="submit")
+                  i.linecons-search
+            | 					
+            | 					
+            li.dropdown.user-profile
+              a(href="#", data-toggle="dropdown")
+                img.img-circle.img-inline.userpic-32(src="/assets/images/user-4.png", alt="user-image", width="28")
+                | 							
+                span
+                  | Arlind Nushi
+                  i.fa-angle-down
+              | 						
+              | 						
+              ul.dropdown-menu.user-profile-menu.list-unstyled
+                li
+                  a(href="#edit-profile")
+                    i.fa-edit
+                    | 									New Post
+                | 							
+                li
+                  a(href="#settings")
+                    i.fa-wrench
+                    | 									Settings
+                | 							
+                li
+                  a(href="#profile")
+                    i.fa-user
+                    | 									Profile
+                | 							
+                li
+                  a(href="#help")
+                    i.fa-info
+                    | 									Help
+                | 							
+                li.last
+                  a(href="extra-lockscreen.html")
+                    i.fa-lock
+                    | 									Logout
+            | 					
+            | 					
+            li
+              a(href="#", data-toggle="chat")
+                i.fa-comments-o
+        | 			
+        
+        block contentHead
+        block contentHead
+        block content
+        block content1
+        block content2
+
+        // Main Footer
+        // Choose between footer styles: "footer-type-1" or "footer-type-2"
+        // Add class "sticky" to  always stick the footer to the end of page (if page contents is small)
+        // Or class "fixed" to  always fix the footer to the end of page
+        footer.main-footer.sticky.footer-type-1
+          .footer-inner
+            // Add your copyright text here
+            .footer-text
+              | © 2018  
+              strong Xenon
+              |  
+              | 						More Templates 
+              a(href="http://h2design.taobao.com/", target="_blank", title="氢设计") Cobe Design
+            // Go to Top Link, just add rel="go-top" to any link to add this functionality
+            .go-up
+              a(href="#", rel="go-top")
+                i.fa-angle-up
+      // start: Chat Section
+      #chat.fixed
+        .chat-inner
+          h2.chat-header
+            a.chat-close(href="#", data-toggle="chat")
+              i.fa-plus-circle.rotate-45deg
+            | 					
+            | 					Chat
+            | 					
+            span.badge.badge-success.is-hidden 0
+          | 				
+          | 				
+          script(type="text/javascript").
+            // Here is just a sample how to open chat conversation box
+            jQuery(document).ready(function($)
+            {
+            var $chat_conversation = $(".chat-conversation");
+            $(".chat-group a").on('click', function(ev)
+            {
+            ev.preventDefault();
+            $chat_conversation.toggleClass('is-open');
+            $(".chat-conversation textarea").trigger('autosize.resize').focus();
+            });
+            $(".conversation-close").on('click', function(ev)
+            {
+            ev.preventDefault();
+            $chat_conversation.removeClass('is-open');
+            });
+            });
+          | 				
+          | 				
+          | 				
+          .chat-group
+            strong Favorites
+            | 					
+            | 					
+            a(href="#")
+              span.user-status.is-online
+              |  
+              em Catherine J. Watkins
+            | 					
+            a(href="#")
+              span.user-status.is-online
+              |  
+              em Nicholas R. Walker
+            | 					
+            a(href="#")
+              span.user-status.is-busy
+              |  
+              em Susan J. Best
+            | 					
+            a(href="#")
+              span.user-status.is-idle
+              |  
+              em Fernando G. Olson
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Brandon S. Young
+          | 				
+          | 				
+          | 				
+          .chat-group
+            strong Work
+            | 					
+            | 					
+            a(href="#")
+              span.user-status.is-busy
+              |  
+              em Rodrigo E. Lozano
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Robert J. Garcia
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Daniel A. Pena
+          | 				
+          | 				
+          | 				
+          .chat-group
+            strong Other
+            | 					
+            | 					
+            a(href="#")
+              span.user-status.is-online
+              |  
+              em Dennis E. Johnson
+            | 					
+            a(href="#")
+              span.user-status.is-online
+              |  
+              em Stuart A. Shire
+            | 					
+            a(href="#")
+              span.user-status.is-online
+              |  
+              em Janet I. Matas
+            | 					
+            a(href="#")
+              span.user-status.is-online
+              |  
+              em Mindy A. Smith
+            | 					
+            a(href="#")
+              span.user-status.is-busy
+              |  
+              em Herman S. Foltz
+            | 					
+            a(href="#")
+              span.user-status.is-busy
+              |  
+              em Gregory E. Robie
+            | 					
+            a(href="#")
+              span.user-status.is-busy
+              |  
+              em Nellie T. Foreman
+            | 					
+            a(href="#")
+              span.user-status.is-busy
+              |  
+              em William R. Miller
+            | 					
+            a(href="#")
+              span.user-status.is-idle
+              |  
+              em Vivian J. Hall
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Melinda A. Anderson
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Gary M. Mooneyham
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Robert C. Medina
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Dylan C. Bernal
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Marc P. Sanborn
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Kenneth M. Rochester
+            | 					
+            a(href="#")
+              span.user-status.is-offline
+              |  
+              em Rachael D. Carpenter
+        // conversation template
+        .chat-conversation
+          .conversation-header
+            a.conversation-close(href="#")
+              | ×
+            | 					
+            | 					
+            span.user-status.is-online
+            | 					
+            span.display-name Arlind Nushi
+            |  
+            | 					
+            small Online
+          | 				
+          | 				
+          ul.conversation-body
+            li
+              span.user Arlind Nushi
+              | 						
+              span.time 09:00
+              | 						
+              p Are you here?
+            | 					
+            li.odd
+              span.user Brandon S. Young
+              | 						
+              span.time 09:25
+              | 						
+              p This message is pre-queued.
+            | 					
+            li
+              span.user Brandon S. Young
+              | 						
+              span.time 09:26
+              | 						
+              p Whohoo!
+            | 					
+            li.odd
+              span.user Arlind Nushi
+              | 						
+              span.time 09:27
+              | 						
+              p Do you like it?
+          | 				
+          | 				
+          .chat-textarea
+            textarea.form-control.autogrow(placeholder="Type your message")
+      // end: Chat Section
+
+    // Bottom Scripts
+    script(src="/assets/js/bootstrap.min.js")
+    script(src="/assets/js/TweenMax.min.js")
+    script(src="/assets/js/resizeable.js")
+    script(src="/assets/js/joinable.js")
+    script(src="/assets/js/xenon-api.js")
+    script(src="/assets/js/xenon-toggles.js")
+    // JavaScripts initializations and stuff
+    script(src="/assets/js/xenon-custom.js")
+
+    
